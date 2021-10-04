@@ -2,22 +2,15 @@
 title: "Instalación"
 date: 2021-10-04T12:01:52+02:00
 draft: false
+weight: 1
 description: >
-    Instalación e inicio de herramientas para el desarrollo
+    Instalación e inicio de herramientas para el desarrollo y configuración 
+
 ---
 
 ***
 ## Sección de pruebas
-{{< highlight html >}}
-<section id="main">
-  <div>
-   <h1 id="title">{{ .Title }}</h1>
-    {{ range .Pages }}
-        {{ .Render "summary"}}
-    {{ end }}
-  </div>
-</section>
-{{< /highlight >}}
+
 ***
 
 ## Instalación 
@@ -35,10 +28,10 @@ Recuerda:
 {{% /pageinfo %}}
 
 {{< tabpane >}}
-{{< tab header="apt-get" lang="bash">}}
+{{< tab header="apt-get" lang="shell">}}
     sudo apt-get install hugo
   {{< /tab >}}
-  {{< tab header="snap" lang="bash">}}
+  {{< tab header="snap" lang="shell">}}
     sudo snap install hugo --classic
   {{< /tab >}}
 {{< /tabpane >}}
@@ -71,10 +64,7 @@ Una vez instalado si escriben en el terminal ***code .*** te habre el editor y t
 ## Crear un sitio nuevo
 Mejor tener una carpeta concreta para los sitios que vayamos a crear
 
-{{< highlight bash
-
-
- >}}
+{{<highlight javascript >}}
 $ hugo new site <nombre_del_sitio>
 {{</highlight>}}
 
@@ -82,12 +72,4 @@ $ hugo new site <nombre_del_sitio>
 This is a warning.
 {{% /alert %}}
 
-## Markdown
-Repaso (o apredner) la sintaxis:
-
-* [https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-* https://programminghistorian.org/es/lecciones/introduccion-a-markdown
-* 
-Este metalenguaje o lenguaje con marcas es muy utilizado en la  documentación técnica.
-
-Es importante aprender a utilizarla con cierta flexibilidad
+## Configuración 

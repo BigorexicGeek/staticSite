@@ -7,15 +7,17 @@ _mege='deep'
 
 enableEmoji = true
 
-[params]
-custom_css=['/css/estilo.css']
-
 # Highlighting config
 pygmentsCodeFences = true
-pygmentsUseClasses = true
+pygmentsUseClasses = false
 # Use the new Chroma Go highlighter in Hugo.
 pygmentsUseClassic = false
 #pygmentsOptions = "linenos=table"
 # See https://help.farbox.com/pygments.html
 pygmentsStyle = "tango"
+
+
+[params]
+custom_css=['/css/estilo.css']
+
 
