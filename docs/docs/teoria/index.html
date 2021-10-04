@@ -93,12 +93,19 @@
   <nav class="collapse td-sidebar-nav" id="td-section-nav">
     <ul class="td-sidebar-nav__section pr-md-3 ul-0">
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-staticsitedocs-li">
-  <a href="/staticSite/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-staticsitedocs"><span class="">Recursos</span></a>
+  <a href="/staticSite/docs/" title="La web" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-staticsitedocs"><span class="">Static Web Server</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-staticsitedocsteoria-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-staticsitedocsteoria-li">
   <a href="/staticSite/docs/teoria/" title="Crear Sitios Estáticos" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-staticsitedocsteoria"><span class="td-sidebar-nav-active-item">Sitios Estáticos</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-staticsitedocsteoriainstalacion-li">
+  <a href="/staticSite/docs/teoria/instalacion/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-staticsitedocsteoriainstalacion"><span class="">Instalación</span></a>
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-staticsitedocspracticaspractica1-li">
   <a href="/staticSite/docs/practicas/practica1/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-staticsitedocspracticaspractica1"><span class="">Primera tarea</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-staticsitedocspracticaspractica2-li">
+  <a href="/staticSite/docs/practicas/practica2/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-staticsitedocspracticaspractica2"><span class="">Segunda tarea</span></a>
 </li>
   </ul>
 </li>
@@ -123,15 +130,6 @@
 
             
 
-
-<div class="td-toc"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#por-qué-un-generador-de-sitios-estáticos">¿Por qué un generador de sitios estáticos?</a></li>
-    <li><a href="#instalación">Instalación</a></li>
-    <li><a href="#crear-un-sitio-nuevo">Crear un sitio nuevo</a></li>
-    <li><a href="#markdown">Markdown</a></li>
-  </ul>
-</nav></div>
 
 
 
@@ -171,7 +169,7 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="http://MAlejandroR,github.io/staticSite/docs/">Recursos</a>
+	<a href="http://MAlejandroR,github.io/staticSite/docs/">Static Web Server</a>
 </li>
 
 
@@ -203,12 +201,14 @@
 		
 		
 	</header>
-	
+	<p>emojify  <code>:heart</code>:  se visualiza ❤️</p>
+
 
 <div class="pageinfo pageinfo-primary">
 <ul>
 <li>Introducción a la generación de sitios web con HUGO</li>
 <li>Crear un sitio estático con hugo</li>
+<li>Instala, configura y agraba contenidos</li>
 </ul>
 
 </div>
@@ -220,48 +220,6 @@
 <li>Eficiencia</li>
 <li>Consistencia de contenidos y formatos</li>
 </ul>
-<h2 id="instalación">Instalación</h2>
-<p>Tiene instaladores para mac, windows y linux:</p>
-<ul>
-<li><a href="https://gohugo.io/getting-started/quick-start/#step-1-install-hugo">https://gohugo.io/getting-started/quick-start/#step-1-install-hugo</a></li>
-</ul>
-<p>
-
-<div class="pageinfo pageinfo-primary">
-<p>Recuerda:</p>
-<ul>
-<li>Instalar la herramienta hugo</li>
-<li>Configurar el <strong>path</strong> del sistema para acceder desde cualquier invocación</li>
-<li>Gestionamos desde un terminal todo</li>
-<li>Verifica la versión</li>
-</ul>
-
-</div>
-
-<!-- raw HTML omitted --></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install hugo 
-</code></pre></div><p>Con <em><strong>snap</strong></em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">snap install hugo
-</code></pre></div><p>Si no tuviera <a href="https://snapcraft.io/docs/snap-documentation">snap</a> instalado</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install snapd
-</code></pre></div><!-- raw HTML omitted -->
-<p>Esta opción actualmente instala una versión 0.68 <em><strong>La actual es 0.88</strong></em></p>
-<p>Otra opción es instalar con  snap , o bien descargar el paquete de la web  <a href="https://gohugo.io">Página de hugo</a></p>
-<h2 id="crear-un-sitio-nuevo">Crear un sitio nuevo</h2>
-<p>Mejor tener una carpeta concreta para los sitios que vayamos a crear</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hugo new site &lt;nombre_del_sitio&gt;
-</code></pre></div><p>{%alert%}
-No tengas miedo a volver a crear de nuevo otro sitio si quieres volver a probar
-{}</p>
-<h2 id="markdown">Markdown</h2>
-<p>Repaso (o apredner) la sintaxis:</p>
-<ul>
-<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></li>
-<li><a href="https://programminghistorian.org/es/lecciones/introduccion-a-markdown">https://programminghistorian.org/es/lecciones/introduccion-a-markdown</a></li>
-<li></li>
-</ul>
-<p>Este metalenguaje o lenguaje con marcas es muy utilizado en la  documentación técnica.</p>
-<p>Es importante aprender a utilizarla con cierta flexibilidad</p>
 
         <div class="section-index">
     
@@ -272,6 +230,16 @@ No tengas miedo a volver a crear de nuevo otro sitio si quieres volver a probar
     
     
     
+    <hr class="panel-line">
+        
+            
+            <div class="entry">
+                <h5>
+                    <a href="/staticSite/docs/teoria/instalacion/">Instalación</a>
+                </h5>
+                <p>Instalación e inicio de herramientas para el desarrollo</p>
+            </div>
+        
     
 </div>
 
