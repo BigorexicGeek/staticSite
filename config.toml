@@ -2,7 +2,7 @@ baseURL = 'http://MAlejandroR,github.io/staticSite'
 languageCode = 'es-ES'
 title = 'DWES Vespertino'
 theme =['docsy']
-_mege='deep'
+
  
 
 enableEmoji = true
@@ -15,6 +15,8 @@ pygmentsUseClassic = false
 #pygmentsOptions = "linenos=table"
 # See https://help.farbox.com/pygments.html
 pygmentsStyle = "tango"
+
+
 
 
 [params]

@@ -7,6 +7,8 @@ description: >
   Introducción a la creación de sitios estáticos con Hugo
 ---
 
+{{ .TableOfContent }}
+
 
 emojify  `:heart`:  se visualiza :heart:
 
